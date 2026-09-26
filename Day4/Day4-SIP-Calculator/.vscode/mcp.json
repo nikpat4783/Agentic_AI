@@ -1,0 +1,12 @@
+{
+  "servers": {
+    "fetch": {
+      "type": "stdio",
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-fetch"
+      ]
+    }
+  }
+}

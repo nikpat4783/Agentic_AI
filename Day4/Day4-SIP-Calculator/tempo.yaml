@@ -1,0 +1,21 @@
+server:
+  http_listen_port: 3200
+  log_level: info
+
+storage:
+  trace:
+    backend: local
+    wal:
+      path: /var/tempo/wal
+    local:
+      path: /var/tempo/blocks
+
+distributor:
+  log_received_traces: true
+
+metrics_generator:
+  ring:
+    kvstore:
+      store: inmemory
+  storage:
+    path: /var/tempo/generator/wal

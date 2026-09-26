@@ -1,0 +1,11 @@
+apiVersion: 1
+
+providers:
+  - name: 'SIP Calculator Dashboards'
+    orgId: 1
+    folder: 'SIP Calculator'
+    type: file
+    disableDeletion: false
+    editable: true
+    options:
+      path: /var/lib/grafana/dashboards

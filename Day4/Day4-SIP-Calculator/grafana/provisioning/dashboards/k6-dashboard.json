@@ -1,0 +1,199 @@
+{
+  "annotations": {
+    "list": [
+      {
+        "builtIn": 1,
+        "datasource": "-- Grafana --",
+        "enable": true,
+        "hide": true,
+        "iconColor": "rgba(0, 211, 255, 1)",
+        "name": "Annotations & Alerts",
+        "type": "dashboard"
+      }
+    ]
+  },
+  "editable": true,
+  "gnetId": null,
+  "graphTooltip": 0,
+  "links": [],
+  "panels": [
+    {
+      "datasource": "InfluxDB-k6",
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "palette-classic"
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 8,
+        "w": 12,
+        "x": 0,
+        "y": 0
+      },
+      "id": 1,
+      "targets": [
+        {
+          "refId": "A",
+          "format": "time_series",
+          "rawQuery": true,
+          "query": "SELECT \"value\" FROM \"vus\" WHERE $timeFilter"
+        }
+      ],
+      "title": "Virtual Users (VUs)",
+      "type": "timeseries"
+    },
+    {
+      "datasource": "InfluxDB-k6",
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "palette-classic"
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 8,
+        "w": 12,
+        "x": 12,
+        "y": 0
+      },
+      "id": 2,
+      "targets": [
+        {
+          "refId": "A",
+          "format": "time_series",
+          "rawQuery": true,
+          "query": "SELECT \"value\" FROM \"http_reqs\" WHERE $timeFilter"
+        }
+      ],
+      "title": "HTTP Requests Rate",
+      "type": "timeseries"
+    },
+    {
+      "datasource": "InfluxDB-k6",
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "palette-classic"
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 8,
+        "w": 12,
+        "x": 0,
+        "y": 8
+      },
+      "id": 3,
+      "targets": [
+        {
+          "refId": "A",
+          "format": "time_series",
+          "rawQuery": true,
+          "query": "SELECT \"value\" FROM \"http_req_duration\" WHERE $timeFilter"
+        }
+      ],
+      "title": "Request Duration (Latency)",
+      "type": "timeseries"
+    },
+    {
+      "datasource": "InfluxDB-k6",
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "palette-classic"
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 8,
+        "w": 12,
+        "x": 12,
+        "y": 8
+      },
+      "id": 4,
+      "targets": [
+        {
+          "refId": "A",
+          "format": "time_series",
+          "rawQuery": true,
+          "query": "SELECT \"value\" FROM \"http_req_failed\" WHERE $timeFilter"
+        }
+      ],
+      "title": "Failed Requests",
+      "type": "timeseries"
+    },
+    {
+      "datasource": "InfluxDB-k6",
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "palette-classic"
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 8,
+        "w": 12,
+        "x": 0,
+        "y": 16
+      },
+      "id": 5,
+      "targets": [
+        {
+          "refId": "A",
+          "format": "time_series",
+          "rawQuery": true,
+          "query": "SELECT \"value\" FROM \"data_sent\" WHERE $timeFilter"
+        }
+      ],
+      "title": "Data Sent",
+      "type": "timeseries"
+    },
+    {
+      "datasource": "InfluxDB-k6",
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "palette-classic"
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 8,
+        "w": 12,
+        "x": 12,
+        "y": 16
+      },
+      "id": 6,
+      "targets": [
+        {
+          "refId": "A",
+          "format": "time_series",
+          "rawQuery": true,
+          "query": "SELECT \"value\" FROM \"data_received\" WHERE $timeFilter"
+        }
+      ],
+      "title": "Data Received",
+      "type": "timeseries"
+    }
+  ],
+  "refresh": "10s",
+  "schemaVersion": 38,
+  "style": "dark",
+  "tags": ["k6", "load-test"],
+  "templating": {"list": []},
+  "time": {"from": "now-1h", "to": "now"},
+  "timepicker": {},
+  "timezone": "",
+  "title": "K6 Load Test Dashboard",
+  "version": 1
+}

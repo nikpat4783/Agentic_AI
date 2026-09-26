@@ -1,0 +1,890 @@
+{
+  "nodes": [
+    {
+      "id": "g0",
+      "type": "group",
+      "label": "Frontend DOM Components",
+      "x": 0,
+      "y": 0,
+      "width": 880,
+      "height": 520,
+      "color": "1"
+    },
+    {
+      "id": "n_script_annualstepupinput",
+      "type": "file",
+      "file": "annualStepUpInput.md",
+      "x": 20,
+      "y": 80,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_script_currencyformatter",
+      "type": "file",
+      "file": "currencyFormatter.md",
+      "x": 220,
+      "y": 80,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_script_estimatedgainsel",
+      "type": "file",
+      "file": "estimatedGainsEl.md",
+      "x": 420,
+      "y": 80,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_script_expectedreturninput",
+      "type": "file",
+      "file": "expectedReturnInput.md",
+      "x": 620,
+      "y": 80,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_script_form",
+      "type": "file",
+      "file": "form.md",
+      "x": 20,
+      "y": 160,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_script_initial",
+      "type": "file",
+      "file": "initial.md",
+      "x": 220,
+      "y": 160,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_script_investmentyearsinput",
+      "type": "file",
+      "file": "investmentYearsInput.md",
+      "x": 420,
+      "y": 160,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_script_maturityamountel",
+      "type": "file",
+      "file": "maturityAmountEl.md",
+      "x": 620,
+      "y": 160,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_script_monthlyinvestmentinput",
+      "type": "file",
+      "file": "monthlyInvestmentInput.md",
+      "x": 20,
+      "y": 240,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_script_monthlysipdisplayel",
+      "type": "file",
+      "file": "monthlySipDisplayEl.md",
+      "x": 220,
+      "y": 240,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_script_resetbtn",
+      "type": "file",
+      "file": "resetBtn.md",
+      "x": 420,
+      "y": 240,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_script_returnratedisplayel",
+      "type": "file",
+      "file": "returnRateDisplayEl.md",
+      "x": 620,
+      "y": 240,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_script",
+      "type": "file",
+      "file": "script.js.md",
+      "x": 20,
+      "y": 320,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_script_summarychipel",
+      "type": "file",
+      "file": "summaryChipEl.md",
+      "x": 220,
+      "y": 320,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_script_totalinvestedel",
+      "type": "file",
+      "file": "totalInvestedEl.md",
+      "x": 420,
+      "y": 320,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "g1",
+      "type": "group",
+      "label": "Documentation & Architecture",
+      "x": 960,
+      "y": 0,
+      "width": 880,
+      "height": 520,
+      "color": "2"
+    },
+    {
+      "id": "n__claude_agents_backend_agent",
+      "type": "file",
+      "file": "Backend Agent Specification.md",
+      "x": 980,
+      "y": 80,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_styles",
+      "type": "file",
+      "file": "CSS Stylesheet (styles.css).md",
+      "x": 1180,
+      "y": 80,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_express_framework",
+      "type": "file",
+      "file": "Express.js Framework.md",
+      "x": 1380,
+      "y": 80,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_form_validation",
+      "type": "file",
+      "file": "Form Validation Pattern.md",
+      "x": 1580,
+      "y": 80,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_json_error_handling",
+      "type": "file",
+      "file": "JSON Error Handling Pattern.md",
+      "x": 980,
+      "y": 160,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_node_js",
+      "type": "file",
+      "file": "Node.js Runtime.md",
+      "x": 1180,
+      "y": 160,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_sip_calculator",
+      "type": "file",
+      "file": "SIP Calculator Application.md",
+      "x": 1380,
+      "y": 160,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_index",
+      "type": "file",
+      "file": "SIP Calculator Frontend HTML.md",
+      "x": 1580,
+      "y": 160,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_server_app",
+      "type": "file",
+      "file": "app.md",
+      "x": 980,
+      "y": 240,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_server_express",
+      "type": "file",
+      "file": "express.md",
+      "x": 1180,
+      "y": 240,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_server_path",
+      "type": "file",
+      "file": "path.md",
+      "x": 1380,
+      "y": 240,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_ref_path",
+      "type": "file",
+      "file": "ref_path.md",
+      "x": 1580,
+      "y": 240,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_server",
+      "type": "file",
+      "file": "server.js.md",
+      "x": 980,
+      "y": 320,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "g2",
+      "type": "group",
+      "label": "Package Configuration",
+      "x": 1920,
+      "y": 0,
+      "width": 880,
+      "height": 420,
+      "color": "3"
+    },
+    {
+      "id": "n_package_dependencies",
+      "type": "file",
+      "file": "dependencies.md",
+      "x": 1940,
+      "y": 80,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_package_description",
+      "type": "file",
+      "file": "description.md",
+      "x": 2140,
+      "y": 80,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_package_scripts_dev",
+      "type": "file",
+      "file": "dev.md",
+      "x": 2340,
+      "y": 80,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_package_dependencies_express",
+      "type": "file",
+      "file": "express_1.md",
+      "x": 2540,
+      "y": 80,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_ref_express",
+      "type": "file",
+      "file": "express_2.md",
+      "x": 1940,
+      "y": 160,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_package_main",
+      "type": "file",
+      "file": "main.md",
+      "x": 2140,
+      "y": 160,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_package_name",
+      "type": "file",
+      "file": "name.md",
+      "x": 2340,
+      "y": 160,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_package",
+      "type": "file",
+      "file": "package.json.md",
+      "x": 2540,
+      "y": 160,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_package_scripts",
+      "type": "file",
+      "file": "scripts.md",
+      "x": 1940,
+      "y": 240,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_package_scripts_start",
+      "type": "file",
+      "file": "start.md",
+      "x": 2140,
+      "y": 240,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_package_scripts_test",
+      "type": "file",
+      "file": "test.md",
+      "x": 2340,
+      "y": 240,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_package_version",
+      "type": "file",
+      "file": "version.md",
+      "x": 2540,
+      "y": 240,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "g3",
+      "type": "group",
+      "label": "Test Suite",
+      "x": 0,
+      "y": 600,
+      "width": 660,
+      "height": 420,
+      "color": "4"
+    },
+    {
+      "id": "n_test_sip_test_assert",
+      "type": "file",
+      "file": "assert.md",
+      "x": 20,
+      "y": 680,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_server_calculatesipvalue",
+      "type": "file",
+      "file": "calculateSipValue().md",
+      "x": 220,
+      "y": 680,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_ref_node_assert",
+      "type": "file",
+      "file": "ref_node_assert.md",
+      "x": 420,
+      "y": 680,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_ref_node_test",
+      "type": "file",
+      "file": "ref_node_test.md",
+      "x": 20,
+      "y": 760,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_test_sip_test",
+      "type": "file",
+      "file": "sip.test.js.md",
+      "x": 220,
+      "y": 760,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_test_sip_test_test",
+      "type": "file",
+      "file": "test_1.md",
+      "x": 420,
+      "y": 760,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_test_sip_test_calculatesipvalue",
+      "type": "file",
+      "file": "{ calculateSipValue }.md",
+      "x": 20,
+      "y": 840,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "g4",
+      "type": "group",
+      "label": "Core Calculator Functions",
+      "x": 960,
+      "y": 600,
+      "width": 660,
+      "height": 400,
+      "color": "5"
+    },
+    {
+      "id": "n_script_calculatesipvalue",
+      "type": "file",
+      "file": "calculateSipValue()_1.md",
+      "x": 980,
+      "y": 680,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_script_formatcurrency",
+      "type": "file",
+      "file": "formatCurrency().md",
+      "x": 1180,
+      "y": 680,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_script_loadsipresults",
+      "type": "file",
+      "file": "loadSipResults().md",
+      "x": 1380,
+      "y": 680,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_script_renderresults",
+      "type": "file",
+      "file": "renderResults().md",
+      "x": 980,
+      "y": 760,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_script_updatesummary",
+      "type": "file",
+      "file": "updateSummary().md",
+      "x": 1180,
+      "y": 760,
+      "width": 180,
+      "height": 60
+    }
+  ],
+  "edges": [
+    {
+      "id": "e_server_calculatesipvalue_server",
+      "fromNode": "n_server_calculatesipvalue",
+      "toNode": "n_server",
+      "label": "contains [EXTRACTED]"
+    },
+    {
+      "id": "e_server_calculatesipvalue_test_sip_test",
+      "fromNode": "n_server_calculatesipvalue",
+      "toNode": "n_test_sip_test",
+      "label": "imports [EXTRACTED]"
+    },
+    {
+      "id": "e_script_calculatesipvalue_script_loadsipresults",
+      "fromNode": "n_script_calculatesipvalue",
+      "toNode": "n_script_loadsipresults",
+      "label": "calls [EXTRACTED]"
+    },
+    {
+      "id": "e_script_calculatesipvalue_script",
+      "fromNode": "n_script_calculatesipvalue",
+      "toNode": "n_script",
+      "label": "contains [EXTRACTED]"
+    },
+    {
+      "id": "e_script_formatcurrency_script_renderresults",
+      "fromNode": "n_script_formatcurrency",
+      "toNode": "n_script_renderresults",
+      "label": "calls [EXTRACTED]"
+    },
+    {
+      "id": "e_script_formatcurrency_script",
+      "fromNode": "n_script_formatcurrency",
+      "toNode": "n_script",
+      "label": "contains [EXTRACTED]"
+    },
+    {
+      "id": "e_script_loadsipresults_script_renderresults",
+      "fromNode": "n_script_loadsipresults",
+      "toNode": "n_script_renderresults",
+      "label": "calls [EXTRACTED]"
+    },
+    {
+      "id": "e_script_loadsipresults_script",
+      "fromNode": "n_script_loadsipresults",
+      "toNode": "n_script",
+      "label": "contains [EXTRACTED]"
+    },
+    {
+      "id": "e_script_renderresults_script_updatesummary",
+      "fromNode": "n_script_renderresults",
+      "toNode": "n_script_updatesummary",
+      "label": "calls [EXTRACTED]"
+    },
+    {
+      "id": "e_script_renderresults_script",
+      "fromNode": "n_script_renderresults",
+      "toNode": "n_script",
+      "label": "contains [EXTRACTED]"
+    },
+    {
+      "id": "e_script_updatesummary_script",
+      "fromNode": "n_script_updatesummary",
+      "toNode": "n_script",
+      "label": "contains [EXTRACTED]"
+    },
+    {
+      "id": "e_script_script_form",
+      "fromNode": "n_script",
+      "toNode": "n_script_form",
+      "label": "contains [EXTRACTED]"
+    },
+    {
+      "id": "e_script_script_totalinvestedel",
+      "fromNode": "n_script",
+      "toNode": "n_script_totalinvestedel",
+      "label": "contains [EXTRACTED]"
+    },
+    {
+      "id": "e_script_script_estimatedgainsel",
+      "fromNode": "n_script",
+      "toNode": "n_script_estimatedgainsel",
+      "label": "contains [EXTRACTED]"
+    },
+    {
+      "id": "e_script_script_initial",
+      "fromNode": "n_script",
+      "toNode": "n_script_initial",
+      "label": "contains [EXTRACTED]"
+    },
+    {
+      "id": "e_script_script_monthlysipdisplayel",
+      "fromNode": "n_script",
+      "toNode": "n_script_monthlysipdisplayel",
+      "label": "contains [EXTRACTED]"
+    },
+    {
+      "id": "e_script_script_returnratedisplayel",
+      "fromNode": "n_script",
+      "toNode": "n_script_returnratedisplayel",
+      "label": "contains [EXTRACTED]"
+    },
+    {
+      "id": "e_script_script_summarychipel",
+      "fromNode": "n_script",
+      "toNode": "n_script_summarychipel",
+      "label": "contains [EXTRACTED]"
+    },
+    {
+      "id": "e_script_script_currencyformatter",
+      "fromNode": "n_script",
+      "toNode": "n_script_currencyformatter",
+      "label": "contains [EXTRACTED]"
+    },
+    {
+      "id": "e_script_script_resetbtn",
+      "fromNode": "n_script",
+      "toNode": "n_script_resetbtn",
+      "label": "contains [EXTRACTED]"
+    },
+    {
+      "id": "e_script_script_monthlyinvestmentinput",
+      "fromNode": "n_script",
+      "toNode": "n_script_monthlyinvestmentinput",
+      "label": "contains [EXTRACTED]"
+    },
+    {
+      "id": "e_script_script_expectedreturninput",
+      "fromNode": "n_script",
+      "toNode": "n_script_expectedreturninput",
+      "label": "contains [EXTRACTED]"
+    },
+    {
+      "id": "e_script_script_investmentyearsinput",
+      "fromNode": "n_script",
+      "toNode": "n_script_investmentyearsinput",
+      "label": "contains [EXTRACTED]"
+    },
+    {
+      "id": "e_script_script_annualstepupinput",
+      "fromNode": "n_script",
+      "toNode": "n_script_annualstepupinput",
+      "label": "contains [EXTRACTED]"
+    },
+    {
+      "id": "e_script_script_maturityamountel",
+      "fromNode": "n_script",
+      "toNode": "n_script_maturityamountel",
+      "label": "contains [EXTRACTED]"
+    },
+    {
+      "id": "e_script_index",
+      "fromNode": "n_script",
+      "toNode": "n_index",
+      "label": "references [EXTRACTED]"
+    },
+    {
+      "id": "e_script_server",
+      "fromNode": "n_script",
+      "toNode": "n_server",
+      "label": "calls [INFERRED]"
+    },
+    {
+      "id": "e_server_ref_express",
+      "fromNode": "n_server",
+      "toNode": "n_ref_express",
+      "label": "imports_from [EXTRACTED]"
+    },
+    {
+      "id": "e_server_ref_path",
+      "fromNode": "n_server",
+      "toNode": "n_ref_path",
+      "label": "imports_from [EXTRACTED]"
+    },
+    {
+      "id": "e_server_test_sip_test",
+      "fromNode": "n_server",
+      "toNode": "n_test_sip_test",
+      "label": "imports_from [EXTRACTED]"
+    },
+    {
+      "id": "e_server_server_express",
+      "fromNode": "n_server",
+      "toNode": "n_server_express",
+      "label": "contains [EXTRACTED]"
+    },
+    {
+      "id": "e_server_server_path",
+      "fromNode": "n_server",
+      "toNode": "n_server_path",
+      "label": "contains [EXTRACTED]"
+    },
+    {
+      "id": "e_server_server_app",
+      "fromNode": "n_server",
+      "toNode": "n_server_app",
+      "label": "contains [EXTRACTED]"
+    },
+    {
+      "id": "e_server_sip_calculator",
+      "fromNode": "n_server",
+      "toNode": "n_sip_calculator",
+      "label": "implements [EXTRACTED]"
+    },
+    {
+      "id": "e_server__claude_agents_backend_agent",
+      "fromNode": "n_server",
+      "toNode": "n__claude_agents_backend_agent",
+      "label": "references [EXTRACTED]"
+    },
+    {
+      "id": "e_server_express_framework",
+      "fromNode": "n_server",
+      "toNode": "n_express_framework",
+      "label": "references [EXTRACTED]"
+    },
+    {
+      "id": "e_server_node_js",
+      "fromNode": "n_server",
+      "toNode": "n_node_js",
+      "label": "references [EXTRACTED]"
+    },
+    {
+      "id": "e_server_form_validation",
+      "fromNode": "n_server",
+      "toNode": "n_form_validation",
+      "label": "implements [INFERRED]"
+    },
+    {
+      "id": "e_server_json_error_handling",
+      "fromNode": "n_server",
+      "toNode": "n_json_error_handling",
+      "label": "implements [INFERRED]"
+    },
+    {
+      "id": "e_package_ref_express",
+      "fromNode": "n_package",
+      "toNode": "n_ref_express",
+      "label": "imports [EXTRACTED]"
+    },
+    {
+      "id": "e_package_package_dependencies",
+      "fromNode": "n_package",
+      "toNode": "n_package_dependencies",
+      "label": "contains [EXTRACTED]"
+    },
+    {
+      "id": "e_package_package_name",
+      "fromNode": "n_package",
+      "toNode": "n_package_name",
+      "label": "contains [EXTRACTED]"
+    },
+    {
+      "id": "e_package_package_version",
+      "fromNode": "n_package",
+      "toNode": "n_package_version",
+      "label": "contains [EXTRACTED]"
+    },
+    {
+      "id": "e_package_package_description",
+      "fromNode": "n_package",
+      "toNode": "n_package_description",
+      "label": "contains [EXTRACTED]"
+    },
+    {
+      "id": "e_package_package_main",
+      "fromNode": "n_package",
+      "toNode": "n_package_main",
+      "label": "contains [EXTRACTED]"
+    },
+    {
+      "id": "e_package_package_scripts",
+      "fromNode": "n_package",
+      "toNode": "n_package_scripts",
+      "label": "contains [EXTRACTED]"
+    },
+    {
+      "id": "e_package_dependencies_package_dependencies_express",
+      "fromNode": "n_package_dependencies",
+      "toNode": "n_package_dependencies_express",
+      "label": "contains [EXTRACTED]"
+    },
+    {
+      "id": "e_package_scripts_package_scripts_start",
+      "fromNode": "n_package_scripts",
+      "toNode": "n_package_scripts_start",
+      "label": "contains [EXTRACTED]"
+    },
+    {
+      "id": "e_package_scripts_package_scripts_dev",
+      "fromNode": "n_package_scripts",
+      "toNode": "n_package_scripts_dev",
+      "label": "contains [EXTRACTED]"
+    },
+    {
+      "id": "e_package_scripts_package_scripts_test",
+      "fromNode": "n_package_scripts",
+      "toNode": "n_package_scripts_test",
+      "label": "contains [EXTRACTED]"
+    },
+    {
+      "id": "e_test_sip_test_ref_node_test",
+      "fromNode": "n_test_sip_test",
+      "toNode": "n_ref_node_test",
+      "label": "imports_from [EXTRACTED]"
+    },
+    {
+      "id": "e_test_sip_test_ref_node_assert",
+      "fromNode": "n_test_sip_test",
+      "toNode": "n_ref_node_assert",
+      "label": "imports_from [EXTRACTED]"
+    },
+    {
+      "id": "e_test_sip_test_test_sip_test_test",
+      "fromNode": "n_test_sip_test",
+      "toNode": "n_test_sip_test_test",
+      "label": "contains [EXTRACTED]"
+    },
+    {
+      "id": "e_test_sip_test_test_sip_test_assert",
+      "fromNode": "n_test_sip_test",
+      "toNode": "n_test_sip_test_assert",
+      "label": "contains [EXTRACTED]"
+    },
+    {
+      "id": "e_test_sip_test_test_sip_test_calculatesipvalue",
+      "fromNode": "n_test_sip_test",
+      "toNode": "n_test_sip_test_calculatesipvalue",
+      "label": "contains [EXTRACTED]"
+    },
+    {
+      "id": "e_index_sip_calculator",
+      "fromNode": "n_index",
+      "toNode": "n_sip_calculator",
+      "label": "implements [EXTRACTED]"
+    },
+    {
+      "id": "e_index_styles",
+      "fromNode": "n_index",
+      "toNode": "n_styles",
+      "label": "references [EXTRACTED]"
+    },
+    {
+      "id": "e_index_form_validation",
+      "fromNode": "n_index",
+      "toNode": "n_form_validation",
+      "label": "implements [INFERRED]"
+    },
+    {
+      "id": "e_sip_calculator__claude_agents_backend_agent",
+      "fromNode": "n_sip_calculator",
+      "toNode": "n__claude_agents_backend_agent",
+      "label": "references [EXTRACTED]"
+    },
+    {
+      "id": "e__claude_agents_backend_agent_form_validation",
+      "fromNode": "n__claude_agents_backend_agent",
+      "toNode": "n_form_validation",
+      "label": "cites [EXTRACTED]"
+    },
+    {
+      "id": "e__claude_agents_backend_agent_json_error_handling",
+      "fromNode": "n__claude_agents_backend_agent",
+      "toNode": "n_json_error_handling",
+      "label": "cites [EXTRACTED]"
+    }
+  ]
+}

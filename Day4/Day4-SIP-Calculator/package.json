@@ -1,0 +1,29 @@
+{
+  "name": "sip-calculator",
+  "version": "1.0.0",
+  "description": "SIP calculator with backend API and MCP support",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js",
+    "test": "node --test",
+    "dev:observe": "OTEL_EXPORTER_OTLP_ENDPOINT=http://localhost:4318 node --watch server.js",
+    "observe:start": "docker-compose up -d",
+    "observe:stop": "docker-compose down",
+    "observe:logs": "docker-compose logs -f"
+  },
+  "dependencies": {
+    "@opentelemetry/api": "^1.9.1",
+    "@opentelemetry/exporter-metrics-otlp-http": "^0.222.0",
+    "@opentelemetry/exporter-trace-otlp-http": "^0.222.0",
+    "@opentelemetry/instrumentation-express": "^0.70.0",
+    "@opentelemetry/instrumentation-fs": "^0.41.0",
+    "@opentelemetry/instrumentation-http": "^0.222.0",
+    "@opentelemetry/resources": "^2.11.0",
+    "@opentelemetry/sdk-metrics": "^2.11.0",
+    "@opentelemetry/sdk-node": "^0.222.0",
+    "@opentelemetry/sdk-trace-node": "^2.11.0",
+    "@opentelemetry/semantic-conventions": "^1.43.0",
+    "express": "^4.21.2"
+  }
+}

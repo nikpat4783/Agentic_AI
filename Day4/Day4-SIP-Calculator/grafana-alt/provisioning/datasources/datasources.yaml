@@ -1,0 +1,28 @@
+apiVersion: 1
+
+datasources:
+  - name: InfluxDB-k6-Alt
+    type: influxdb
+    access: proxy
+    url: http://influxdb-alt:8086
+    isDefault: true
+    database: k6
+    user: k6user
+    secureJsonData:
+      password: k6password
+    jsonData:
+      httpMode: GET
+    editable: true
+
+dashboardProviders:
+  dashboardproviders.yaml:
+    apiVersion: 1
+    providers:
+      - name: 'k6'
+        orgId: 1
+        folder: 'K6 Load Tests'
+        type: file
+        disableDeletion: false
+        editable: true
+        options:
+          path: /etc/grafana/provisioning/dashboards

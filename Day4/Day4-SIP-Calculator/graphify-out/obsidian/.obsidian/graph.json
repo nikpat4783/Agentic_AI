@@ -1,0 +1,39 @@
+{
+  "colorGroups": [
+    {
+      "query": "tag:#community/Frontend_DOM_Components",
+      "color": {
+        "a": 1,
+        "rgb": 5142951
+      }
+    },
+    {
+      "query": "tag:#community/Documentation__Architecture",
+      "color": {
+        "a": 1,
+        "rgb": 15896107
+      }
+    },
+    {
+      "query": "tag:#community/Package_Configuration",
+      "color": {
+        "a": 1,
+        "rgb": 14767961
+      }
+    },
+    {
+      "query": "tag:#community/Test_Suite",
+      "color": {
+        "a": 1,
+        "rgb": 7780274
+      }
+    },
+    {
+      "query": "tag:#community/Core_Calculator_Functions",
+      "color": {
+        "a": 1,
+        "rgb": 5873999
+      }
+    }
+  ]
+}

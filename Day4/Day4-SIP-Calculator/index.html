@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SIP Calculator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="topbar">
+        <div class="brand">
+          <span class="brand-mark">₹</span>
+          <span>SIP Calculator</span>
+        </div>
+      </header>
+
+      <main class="calculator-layout">
+        <section class="panel form-panel">
+          <h1>Plan your investment</h1>
+          <p class="subtitle">Estimate how your monthly investments can grow over time.</p>
+
+          <form id="sip-form">
+            <div class="field-group">
+              <label for="monthly-investment">Monthly SIP amount</label>
+              <div class="input-wrap">
+                <span class="prefix">₹</span>
+                <input id="monthly-investment" type="number" min="0" step="500" value="5000" required />
+              </div>
+            </div>
+
+            <div class="field-group two-column">
+              <div>
+                <label for="expected-return">Expected return rate</label>
+                <div class="input-wrap">
+                  <input id="expected-return" type="number" min="0" step="0.1" value="12" required />
+                  <span class="suffix">% p.a.</span>
+                </div>
+              </div>
+
+              <div>
+                <label for="investment-years">Investment duration</label>
+                <div class="input-wrap">
+                  <input id="investment-years" type="number" min="1" step="1" value="10" required />
+                  <span class="suffix">years</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="field-group">
+              <label for="annual-step-up">Annual increase in SIP</label>
+              <div class="input-wrap">
+                <input id="annual-step-up" type="number" min="0" step="0.5" value="5" />
+                <span class="suffix">% per year</span>
+              </div>
+            </div>
+
+            <div class="actions">
+              <button type="submit" class="primary-btn">Calculate</button>
+              <button type="button" class="secondary-btn" id="reset-btn">Reset</button>
+            </div>
+          </form>
+        </section>
+
+        <section class="panel results-panel">
+          <div class="results-header">
+            <h2>Projected value</h2>
+            <span id="summary-chip" class="summary-chip">10-year outlook</span>
+          </div>
+
+          <div class="result-value-wrap">
+            <p class="result-label">Maturity amount</p>
+            <p id="maturity-amount" class="result-value">₹0</p>
+          </div>
+
+          <div class="stats-grid">
+            <article class="stat-card">
+              <span class="stat-label">Total invested</span>
+              <strong id="total-invested">₹0</strong>
+            </article>
+            <article class="stat-card">
+              <span class="stat-label">Estimated gains</span>
+              <strong id="estimated-gains">₹0</strong>
+            </article>
+            <article class="stat-card">
+              <span class="stat-label">Monthly SIP</span>
+              <strong id="monthly-sip-display">₹0</strong>
+            </article>
+            <article class="stat-card">
+              <span class="stat-label">CAGR/return</span>
+              <strong id="return-rate-display">0% p.a.</strong>
+            </article>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

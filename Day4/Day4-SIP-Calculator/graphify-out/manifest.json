@@ -1,0 +1,44 @@
+{
+  ".vscode/mcp.json": {
+    "mtime": 1789794263.3724504,
+    "seen": 1789795353.671498,
+    "ast_hash": "6037fda884900c9b9cffe3e74f083caa",
+    "semantic_hash": "6037fda884900c9b9cffe3e74f083caa"
+  },
+  "package.json": {
+    "mtime": 1789794261.141943,
+    "seen": 1789795353.6715066,
+    "ast_hash": "e8251aad040a00fffbb9af25d398788a",
+    "semantic_hash": "e8251aad040a00fffbb9af25d398788a"
+  },
+  "script.js": {
+    "mtime": 1789794271.8960721,
+    "seen": 1789795353.6715107,
+    "ast_hash": "b0a2945410aa8b2be184a61d3449966e",
+    "semantic_hash": "b0a2945410aa8b2be184a61d3449966e"
+  },
+  "server.js": {
+    "mtime": 1789794271.8917327,
+    "seen": 1789795353.6715133,
+    "ast_hash": "346779c99acf9dfdf449d48986f812bc",
+    "semantic_hash": "346779c99acf9dfdf449d48986f812bc"
+  },
+  "test/sip.test.js": {
+    "mtime": 1789794275.3153217,
+    "seen": 1789795353.671516,
+    "ast_hash": "12f679ae3002d846864b616cc5ff88ce",
+    "semantic_hash": "12f679ae3002d846864b616cc5ff88ce"
+  },
+  ".claude/agents/backend-agent.md": {
+    "mtime": 1789794262.7004013,
+    "seen": 1789795353.6715183,
+    "ast_hash": "e5e775df5e594ed864b016790612f894",
+    "semantic_hash": "e5e775df5e594ed864b016790612f894"
+  },
+  "index.html": {
+    "mtime": 1789794124.4493167,
+    "seen": 1789795353.6715202,
+    "ast_hash": "20ff0b66166ebf5bca9801af72b1fb00",
+    "semantic_hash": "20ff0b66166ebf5bca9801af72b1fb00"
+  }
+}
