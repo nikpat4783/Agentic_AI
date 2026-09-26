@@ -1,0 +1,12 @@
+.venv/
+node_modules/
+dist/
+__pycache__/
+*.pyc
+*.db
+.env
+.dev-logs/
+.dev-pids.json
+loadtest/bin/
+graphify-out/
+chroma_data/

@@ -1,0 +1,14 @@
+CARDIAC CATHETERIZATION REPORT
+
+Patient underwent left heart catheterization and coronary angiography for
+evaluation of chest pain.
+
+Findings: Left ventriculography demonstrated LVEF estimated at 35%, consistent
+with moderately reduced systolic function. Coronary angiography revealed
+severe stenosis of the LAD (90% narrowing) with moderate disease in the right
+coronary artery.
+
+Labs: Troponin 0.04 ng/mL on admission, repeat troponin trending downward.
+
+Impression: Severe single-vessel coronary artery disease with reduced left
+ventricular function.

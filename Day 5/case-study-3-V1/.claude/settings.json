@@ -1,0 +1,29 @@
+{
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Write|Edit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "cd backend && .venv/bin/python -m pytest -q 2>&1 | tail -50 || true",
+            "if": "Edit(backend/app/**/*.py)",
+            "timeout": 90,
+            "statusMessage": "Running backend test suite..."
+          }
+        ]
+      }
+    ]
+  },
+  "extraKnownMarketplaces": {
+    "claude-plugins-official": {
+      "source": {
+        "source": "github",
+        "repo": "anthropics/claude-plugins-official"
+      }
+    }
+  },
+  "enabledPlugins": {
+    "pr-review-toolkit@claude-plugins-official": true
+  }
+}

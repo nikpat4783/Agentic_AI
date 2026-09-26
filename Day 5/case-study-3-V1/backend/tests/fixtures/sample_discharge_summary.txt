@@ -1,0 +1,10 @@
+DISCHARGE SUMMARY
+
+Patient admitted with acute chest pain and elevated cardiac biomarkers,
+diagnosed with non-ST elevation myocardial infarction.
+
+Primary diagnosis: I21.4 (Non-ST elevation myocardial infarction).
+
+Hospital course was uncomplicated. Patient was discharged home in stable
+condition with cardiology follow-up scheduled in two weeks and instructions
+to continue dual antiplatelet therapy.
