@@ -1,0 +1,91 @@
+{
+  "title": "k6 Load Test",
+  "uid": "k6-load-test",
+  "schemaVersion": 39,
+  "version": 1,
+  "refresh": "5s",
+  "time": { "from": "now-15m", "to": "now" },
+  "templating": {
+    "list": [
+      {
+        "name": "testid",
+        "type": "query",
+        "datasource": { "type": "prometheus", "uid": "Prometheus" },
+        "query": "label_values(k6_vus, testid)",
+        "refresh": 2,
+        "includeAll": true,
+        "multi": true
+      }
+    ]
+  },
+  "panels": [
+    {
+      "id": 1,
+      "title": "Virtual users",
+      "type": "timeseries",
+      "gridPos": { "h": 8, "w": 12, "x": 0, "y": 0 },
+      "datasource": { "type": "prometheus", "uid": "Prometheus" },
+      "targets": [
+        {
+          "datasource": { "type": "prometheus", "uid": "Prometheus" },
+          "expr": "k6_vus{testid=~\"$testid\"}",
+          "legendFormat": "{{testid}}"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Request rate",
+      "type": "timeseries",
+      "gridPos": { "h": 8, "w": 12, "x": 12, "y": 0 },
+      "datasource": { "type": "prometheus", "uid": "Prometheus" },
+      "targets": [
+        {
+          "datasource": { "type": "prometheus", "uid": "Prometheus" },
+          "expr": "sum(rate(k6_http_reqs_total{testid=~\"$testid\"}[30s])) by (testid)",
+          "legendFormat": "{{testid}}"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Request duration (p95 / p99 / avg)",
+      "type": "timeseries",
+      "gridPos": { "h": 8, "w": 12, "x": 0, "y": 8 },
+      "fieldConfig": { "defaults": { "unit": "ms" }, "overrides": [] },
+      "datasource": { "type": "prometheus", "uid": "Prometheus" },
+      "targets": [
+        {
+          "datasource": { "type": "prometheus", "uid": "Prometheus" },
+          "expr": "k6_http_req_duration_p95{testid=~\"$testid\"}",
+          "legendFormat": "p95 {{testid}}"
+        },
+        {
+          "datasource": { "type": "prometheus", "uid": "Prometheus" },
+          "expr": "k6_http_req_duration_p99{testid=~\"$testid\"}",
+          "legendFormat": "p99 {{testid}}"
+        },
+        {
+          "datasource": { "type": "prometheus", "uid": "Prometheus" },
+          "expr": "k6_http_req_duration_avg{testid=~\"$testid\"}",
+          "legendFormat": "avg {{testid}}"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Failed request rate",
+      "type": "timeseries",
+      "gridPos": { "h": 8, "w": 12, "x": 12, "y": 8 },
+      "fieldConfig": { "defaults": { "unit": "percentunit", "max": 1, "min": 0 }, "overrides": [] },
+      "datasource": { "type": "prometheus", "uid": "Prometheus" },
+      "targets": [
+        {
+          "datasource": { "type": "prometheus", "uid": "Prometheus" },
+          "expr": "k6_http_req_failed_rate{testid=~\"$testid\"}",
+          "legendFormat": "{{testid}}"
+        }
+      ]
+    }
+  ]
+}

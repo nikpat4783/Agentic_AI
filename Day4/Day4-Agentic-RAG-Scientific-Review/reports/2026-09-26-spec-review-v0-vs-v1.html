@@ -1,0 +1,339 @@
+<title>Spec Compliance Scorecard</title>
+<style>
+  :root{
+    --bg:#F1F3F5;
+    --surface:#FFFFFF;
+    --surface-2:#E7EBEE;
+    --ink:#14181D;
+    --muted:#5B6472;
+    --border:#DBE1E6;
+    --accent:#22577A;
+    --accent-soft:#E1EBF1;
+    --absent-fg:#8A2E2E;    --absent-bg:#F8E6E6;    --absent-bd:#E7C6C6;
+    --partial-fg:#8A5A00;   --partial-bg:#FBF0DC;   --partial-bd:#EEDBA8;
+    --solid-fg:#1F6F4A;     --solid-bg:#E1F3EA;     --solid-bd:#BCE2CD;
+    color-scheme: light dark;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --bg:#12151A;
+      --surface:#1A1E24;
+      --surface-2:#20252D;
+      --ink:#E7EAEE;
+      --muted:#9AA3AF;
+      --border:#2B3038;
+      --accent:#7DBEDE;
+      --accent-soft:#1D3038;
+      --absent-fg:#F0A3A3;   --absent-bg:#2E1A1A;   --absent-bd:#4A2626;
+      --partial-fg:#E8C066;  --partial-bg:#2E2610;  --partial-bd:#4A3B18;
+      --solid-fg:#7FD1A8;    --solid-bg:#132A1E;    --solid-bd:#20472F;
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg:#12151A;
+    --surface:#1A1E24;
+    --surface-2:#20252D;
+    --ink:#E7EAEE;
+    --muted:#9AA3AF;
+    --border:#2B3038;
+    --accent:#7DBEDE;
+    --accent-soft:#1D3038;
+    --absent-fg:#F0A3A3;   --absent-bg:#2E1A1A;   --absent-bd:#4A2626;
+    --partial-fg:#E8C066;  --partial-bg:#2E2610;  --partial-bd:#4A3B18;
+    --solid-fg:#7FD1A8;    --solid-bg:#132A1E;    --solid-bd:#20472F;
+  }
+
+  @import url('https://fonts.googleapis.com/css2?family=Sora:wght@600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap');
+
+  *{box-sizing:border-box;}
+  body{
+    background:var(--bg);
+    color:var(--ink);
+    font-family:'IBM Plex Sans', system-ui, sans-serif;
+    line-height:1.55;
+    padding:0 16px;
+    padding-block: 40px;
+  }
+  .wrap{max-width:920px;margin:0 auto;}
+
+  .eyebrow{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:12px;
+    letter-spacing:0.08em;
+    text-transform:uppercase;
+    color:var(--accent);
+    margin:0 0 10px;
+  }
+  h1{
+    font-family:'Sora', system-ui, sans-serif;
+    font-weight:700;
+    font-size:clamp(28px,4vw,38px);
+    line-height:1.1;
+    margin:0 0 10px;
+    text-wrap:balance;
+  }
+  .lede{
+    color:var(--muted);
+    font-size:16px;
+    max-width:70ch;
+    margin:0 0 28px;
+  }
+  code, .mono{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:0.92em;
+  }
+  code{
+    background:var(--surface-2);
+    padding:1px 5px;
+    border-radius:4px;
+  }
+
+  .legend{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:14px;
+    margin-bottom:28px;
+  }
+  @media (max-width:560px){ .legend{grid-template-columns:1fr;} }
+  .vcard{
+    background:var(--surface);
+    border:1px solid var(--border);
+    border-radius:10px;
+    padding:16px 18px;
+  }
+  .vcard .vtag{
+    display:inline-block;
+    font-family:'IBM Plex Mono', monospace;
+    font-size:11px;
+    letter-spacing:0.05em;
+    color:var(--accent);
+    background:var(--accent-soft);
+    border-radius:5px;
+    padding:2px 7px;
+    margin-bottom:8px;
+  }
+  .vcard p{margin:0;color:var(--muted);font-size:14px;}
+  .vcard p code{font-size:0.85em;}
+
+  .verdict{
+    background:var(--surface);
+    border:1px solid var(--border);
+    border-left:4px solid var(--accent);
+    border-radius:0 10px 10px 0;
+    padding:18px 20px;
+    margin-bottom:34px;
+  }
+  .verdict h2{
+    font-family:'Sora', system-ui, sans-serif;
+    font-size:14px;
+    letter-spacing:0.06em;
+    text-transform:uppercase;
+    color:var(--accent);
+    margin:0 0 8px;
+  }
+  .verdict p{margin:0;font-size:15px;color:var(--ink);}
+
+  h2.section-title{
+    font-family:'Sora', system-ui, sans-serif;
+    font-size:20px;
+    margin:0 0 4px;
+  }
+  .section-sub{color:var(--muted);font-size:13.5px;margin:0 0 18px;}
+
+  .table-wrap{
+    overflow-x:auto;
+    border:1px solid var(--border);
+    border-radius:10px;
+    background:var(--surface);
+    margin-bottom:36px;
+  }
+  table{
+    border-collapse:collapse;
+    width:100%;
+    min-width:760px;
+    font-size:14px;
+  }
+  thead th{
+    text-align:left;
+    font-family:'Sora', system-ui, sans-serif;
+    font-size:12px;
+    letter-spacing:0.06em;
+    text-transform:uppercase;
+    color:var(--muted);
+    background:var(--surface-2);
+    padding:12px 16px;
+    position:sticky;
+    top:0;
+  }
+  thead th:first-child{width:190px;}
+  tbody td{
+    vertical-align:top;
+    padding:16px;
+    border-top:1px solid var(--border);
+  }
+  tbody td:not(:first-child){width:35%;}
+  tbody tr:nth-child(even){background:color-mix(in srgb, var(--surface-2) 35%, transparent);}
+
+  .kpi-name{font-weight:600;font-size:14.5px;}
+  .delta{
+    display:block;
+    font-family:'IBM Plex Mono', monospace;
+    font-size:11px;
+    margin-top:5px;
+  }
+  .delta.up{color:var(--solid-fg);}
+  .delta.flat{color:var(--muted);}
+
+  .pill{
+    display:inline-block;
+    font-family:'IBM Plex Mono', monospace;
+    font-size:10.5px;
+    letter-spacing:0.04em;
+    text-transform:uppercase;
+    font-weight:500;
+    padding:2px 8px;
+    border-radius:20px;
+    border:1px solid transparent;
+    margin-bottom:7px;
+  }
+  .pill--absent{color:var(--absent-fg);background:var(--absent-bg);border-color:var(--absent-bd);}
+  .pill--partial{color:var(--partial-fg);background:var(--partial-bg);border-color:var(--partial-bd);}
+  .pill--solid{color:var(--solid-fg);background:var(--solid-bg);border-color:var(--solid-bd);}
+
+  .cell-text{color:var(--ink);font-size:13.5px;line-height:1.5;}
+  .cell-text code{font-size:0.88em;}
+
+  .gaps{
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+    margin-bottom:20px;
+  }
+  .gap{
+    background:var(--surface);
+    border:1px solid var(--partial-bd);
+    border-left:4px solid var(--partial-fg);
+    border-radius:0 8px 8px 0;
+    padding:12px 16px;
+    font-size:13.5px;
+  }
+  .gap b{color:var(--ink);}
+  .gap p{margin:4px 0 0;color:var(--muted);}
+
+  footer{
+    color:var(--muted);
+    font-size:12px;
+    border-top:1px solid var(--border);
+    padding-top:16px;
+    margin-top:8px;
+  }
+</style>
+
+<div class="wrap">
+
+  <p class="eyebrow">Spec compliance review</p>
+  <h1>10 KPIs, two versions, one working tree</h1>
+  <p class="lede">Every KPI in <code>SPEC.md</code> scored against real evidence read from both versions of the agentic RAG app — no verdict without a file, a test result, or a log line behind it.</p>
+
+  <div class="legend">
+    <div class="vcard">
+      <span class="vtag">VERSION 0 — <code>acd2d38</code></span>
+      <p>Initial commit. FastAPI + React app calling OpenRouter. No observability, no load testing, no <code>SPEC.md</code>.</p>
+    </div>
+    <div class="vcard">
+      <span class="vtag">VERSION 1 — working tree</span>
+      <p>Groq replaces OpenRouter with 429 retry handling, a full OTel → Grafana/Prometheus/Loki/Tempo stack, k6 load testing, and a <code>knowledge-vault/</code>.</p>
+    </div>
+  </div>
+
+  <div class="verdict">
+    <h2>Overall verdict</h2>
+    <p>Version 1 is a substantial, evidence-backed improvement on the axes that were previously absent or thin: observability, rate-limit robustness, performance visibility, and documentation. Test coverage grew to <b>34 passing</b>. But the citation-format gap and the log-redaction gap in <code>orchestrator.py</code> / <code>logging.py</code> carry over byte-for-byte unchanged — this is a real step forward, not a finished product.</p>
+  </div>
+
+  <h2 class="section-title">KPI-by-KPI comparison</h2>
+  <p class="section-sub">Pill = tier reached in that version. <span class="mono">↑ improved</span> marks a KPI that moved up a tier; <span class="mono">→ unchanged</span> means both versions landed in the same tier.</p>
+
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr><th>KPI</th><th>Version 0</th><th>Version 1</th></tr>
+      </thead>
+      <tbody>
+
+        <tr>
+          <td><span class="kpi-name">Accuracy / groundedness</span><span class="delta flat">→ unchanged</span></td>
+          <td><span class="pill pill--partial">Partial</span><div class="cell-text"><code>CITATION_PATTERN</code> in <code>orchestrator.py</code> correctly filters citations to sources actually retrieved this request — but a tag in any format other than <code>[PMID:...]</code>/<code>[arXiv:...]</code> is silently dropped.</div></td>
+          <td><span class="pill pill--partial">Partial</span><div class="cell-text">Identical logic, identical regex, identical silent-drop gap. Only the LLM client import changed; the citation code itself is untouched.</div></td>
+        </tr>
+
+        <tr>
+          <td><span class="kpi-name">Robustness / error handling</span><span class="delta up">↑ improved</span></td>
+          <td><span class="pill pill--absent">Absent</span><div class="cell-text"><code>openrouter_client.py</code> mapped HTTP 429 straight to a failure with zero retry — any transient rate limit killed the whole request.</div></td>
+          <td><span class="pill pill--solid">Solid</span><div class="cell-text"><code>groq_client.py</code> retries 429 up to twice with <code>Retry-After</code>-aware backoff before raising. Covered by 5 new tests: retry-succeeds, retry-exhausted, 402-no-retry, header-respected, fallback schedule.</div></td>
+        </tr>
+
+        <tr>
+          <td><span class="kpi-name">Security</span><span class="delta flat">→ unchanged</span></td>
+          <td><span class="pill pill--partial">Partial</span><div class="cell-text"><code>RedactSensitiveFilter</code> scrubs key-shaped substrings, but only <code>if isinstance(record.msg, str)</code> — a non-string log message bypasses it entirely.</div></td>
+          <td><span class="pill pill--partial">Partial</span><div class="cell-text">Same filter, same gap — just the header renamed to <code>X-Groq-Key</code>. No regression, no fix either.</div></td>
+        </tr>
+
+        <tr>
+          <td><span class="kpi-name">Performance / latency</span><span class="delta up">↑ improved</span></td>
+          <td><span class="pill pill--absent">Absent</span><div class="cell-text">No load-testing tooling and no latency instrumentation anywhere in the v0 tree.</div></td>
+          <td><span class="pill pill--partial">Partial</span><div class="cell-text"><code>loadtest/scripts/agentic_rag.js</code> drives the real flow; <code>_MetricsMiddleware</code> records request duration. Latency is now measured — but the k6 script asserts no SLO/threshold yet.</div></td>
+        </tr>
+
+        <tr>
+          <td><span class="kpi-name">Observability</span><span class="delta up">↑ improved</span></td>
+          <td><span class="pill pill--absent">Absent</span><div class="cell-text">Only a logging redaction filter existed. No tracing, no metrics — "what did this request do" required reading logs by eye.</div></td>
+          <td><span class="pill pill--solid">Solid</span><div class="cell-text">Full OTel traces (FastAPI + HTTPX auto-instrumentation, manual per-tool-call spans), trace-correlated logs, and 3 metrics exported to a real Grafana/Prometheus/Loki/Tempo stack.</div></td>
+        </tr>
+
+        <tr>
+          <td><span class="kpi-name">Test coverage</span><span class="delta up">↑ improved</span></td>
+          <td><span class="pill pill--partial">Partial</span><div class="cell-text">8 mocked test files covering auth, both search tools, the vector store, chunking, reranking, and the orchestrator loop.</div></td>
+          <td><span class="pill pill--solid">Solid</span><div class="cell-text">Same 8 files plus a new <code>test_groq_client.py</code> (5 tests). <b>34 passed, 0 failed</b> — verified by actually running <code>pytest -q</code> against the current tree.</div></td>
+        </tr>
+
+        <tr>
+          <td><span class="kpi-name">Maintainability / code quality</span><span class="delta flat">→ unchanged</span></td>
+          <td><span class="pill pill--solid">Solid</span><div class="cell-text">42 backend / 28 frontend files. Clean one-of-everything structure, no speculative abstraction.</div></td>
+          <td><span class="pill pill--solid">Solid</span><div class="cell-text">44 backend / 29 frontend files — a 1-for-1 client swap plus one new module. New top-level dirs are additive, not a rewrite of the core app.</div></td>
+        </tr>
+
+        <tr>
+          <td><span class="kpi-name">Cost awareness</span><span class="delta up">↑ improved</span></td>
+          <td><span class="pill pill--partial">Partial</span><div class="cell-text"><code>max_agent_iterations = 6</code> hard-bounds the loop — but nothing existed yet to gate, since there was no load-testing path at all.</div></td>
+          <td><span class="pill pill--solid">Solid</span><div class="cell-text">Same bound preserved; <code>agentic_rag.js</code> is explicitly labeled cost-incurring, refuses to run without a key, and defaults to 1 VU / 3 iterations.</div></td>
+        </tr>
+
+        <tr>
+          <td><span class="kpi-name">Documentation</span><span class="delta up">↑ improved</span></td>
+          <td><span class="pill pill--partial">Partial</span><div class="cell-text">A 51-line README covering purpose, domains, architecture, and setup. No deeper architectural walkthrough.</div></td>
+          <td><span class="pill pill--solid">Solid</span><div class="cell-text">Same README (terminology-only diff) plus a 10-file <code>knowledge-vault/</code> and <code>SPEC.md</code> itself as a durable review target.</div></td>
+        </tr>
+
+        <tr>
+          <td><span class="kpi-name">Usability / operability</span><span class="delta up">↑ improved</span></td>
+          <td><span class="pill pill--partial">Partial</span><div class="cell-text">Rate-limit failures surfaced as a flat "check your account" message with no next step.</div></td>
+          <td><span class="pill pill--solid">Solid</span><div class="cell-text">Identical setup commands; the exhausted-retry message now names the likely cause and suggests two concrete next actions.</div></td>
+        </tr>
+
+      </tbody>
+    </table>
+  </div>
+
+  <h2 class="section-title">Biggest remaining gaps in Version 1</h2>
+  <p class="section-sub">Real weaknesses this session's work did not touch — not a hedge, an actual backlog.</p>
+  <div class="gaps">
+    <div class="gap"><b>Citation format gap is unfixed.</b><p><code>CITATION_PATTERN</code> in <code>orchestrator.py</code> still silently drops any citation outside the exact bracket format — no log, no fallback, no test for a malformed-but-plausible tag.</p></div>
+    <div class="gap"><b>Redaction filter still only guards string messages.</b><p><code>RedactSensitiveFilter.filter()</code> is a no-op on non-string <code>record.msg</code>. The new OTLP log export path rides on the same unfixed filter, widening the blast radius if it's ever bypassed.</p></div>
+    <div class="gap"><b>No SLO assertions in the load test.</b><p><code>agentic_rag.js</code> checks for HTTP 200 and a <code>"final"</code> event, but no <code>thresholds</code> block — closer to a smoke test than a performance gate.</p></div>
+    <div class="gap"><b><code>knowledge-vault/</code> and <code>SPEC.md</code> are unvalidated against drift.</b><p>Nothing currently checks these docs stay in sync as the code changes further.</p></div>
+  </div>
+
+  <footer>Source: <code>reports/2026-09-26-spec-review-v0-vs-v1.md</code> · Generated by the <code>spec-reviewer</code> review pass, 2026-09-26.</footer>
+
+</div>
